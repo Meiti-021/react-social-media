@@ -1,0 +1,40 @@
+nav {
+  border: 1px solid black;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+.nav-btn {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  width: 33.33%;
+  max-width: 350px;
+}
+
+.nav-btn__middle {
+  position: relative;
+}
+
+.nav-btn__middle::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 40px;
+  background-color: black;
+  left: 0px;
+}
+.nav-btn__middle::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 40px;
+  background-color: black;
+  right: 0px;
+}
