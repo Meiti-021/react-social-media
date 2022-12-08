@@ -4,33 +4,37 @@ import { BiCommentAdd } from "react-icons/bi";
 import { IoMdShare } from "react-icons/io";
 import "./meow.css";
 import prof from "./assets/prof.jpg";
-export const Meow = () => {
+import { useState } from "react";
+export const Meow = ({ userInfo, post }) => {
+  const [liked, setLiked] = useState(false);
+  const liker = () => {
+    liked ? setLiked(false) : setLiked(true);
+  };
   return (
     <>
       <div className="meow">
         <div className="meow-header">
-          <img src={prof} alt="" className="meow__profile-picture" />
+          <img
+            src={userInfo.profile}
+            alt=""
+            className="meow__profile-picture"
+          />
           <div className="meow__user-info">
-            <p className="meow__username">Anna Smith</p>
-            <p className="meow__user-id">Anna754</p>
+            <p className="meow__username">{userInfo.name}</p>
+            <p className="meow__user-id">{userInfo.id}</p>
           </div>
         </div>
         <div className="meow-content">
-          <p className="meow-title">new meowww</p>
-          <p className="meow-massage">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
-            dolore necessitatibus laudantium nesciunt, perferendis in aliquam
-            quisquam voluptatum deserunt neque eveniet eligendi corporis tempora
-            ratione eius dignissimos possimus, veniam recusandae!
-          </p>
+          <p className="meow-title">{post.title}</p>
+          <p className="meow-massage">{post.massage}</p>
           <div className="tags">
-            <button className="tag-btn">#web</button>
-            <button className="tag-btn">#front-end</button>
-            <button className="tag-btn">#developer</button>
+            {post.tags.map((item) => {
+              return <button className="tag-btn">{item}</button>;
+            })}
           </div>
           <div className="inter-activity">
-            <button className="like-btn">
-              <AiOutlineHeart />
+            <button className="like-btn" onClick={liker}>
+              {liked ? <AiFillHeart /> : <AiOutlineHeart />}
             </button>
             <button className="comment-btn">
               <BiCommentAdd />
