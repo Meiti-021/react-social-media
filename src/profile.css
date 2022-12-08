@@ -1,0 +1,77 @@
+.profile {
+  width: 100vw;
+  height: 92.5vh;
+}
+
+.profile figure {
+  height: 30vh;
+  background-image: url("./assets/back.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: 5px solid black;
+  margin-bottom: 150px;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -100px;
+  padding: 5px;
+  background: black;
+}
+
+.user-info .username {
+  text-align: center;
+  font-family: "Concert One", cursive;
+  font-size: 45px;
+  margin-bottom: 25px;
+}
+.user-info .user-id {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  margin-bottom: 200px;
+}
+
+.profile .account-insight {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile .account-insight > * {
+  width: 50%;
+  max-width: 500px;
+}
+
+.profile .placeholder {
+  font-size: 30px;
+  font-family: "Concert One", cursive;
+  margin-bottom: 25px;
+}
+
+.profile .follow-counter {
+  font-size: 25px;
+}
+
+.profile .followers-insight {
+  position: relative;
+}
+
+.profile .followers-insight::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 50px;
+  background-color: black;
+  right: 0;
+  top: calc(50% - 25px);
+}
