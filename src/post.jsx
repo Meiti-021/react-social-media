@@ -38,6 +38,11 @@ export const Post = () => {
     };
     console.log(newPost);
     setData([...data, newPost]);
+    setFormData({
+      newMassage: "",
+      title: "",
+      tags: "",
+    });
   };
   return (
     <>
