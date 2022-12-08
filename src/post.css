@@ -1,0 +1,109 @@
+.post {
+  font-family: "Concert One", cursive;
+}
+
+.post figure {
+  height: 30vh;
+  background-image: linear-gradient(
+    -45deg,
+    #673295,
+    #1076e2,
+    #8be071,
+    #fffb62,
+    #fc9127,
+    #d71729
+  );
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: 5px solid transparent;
+  margin-bottom: 150px;
+}
+
+.post .post-image {
+  width: 200px;
+  height: 200px;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -100px;
+  padding: 5px;
+  background-image: linear-gradient(
+    -90deg,
+    #673295,
+    #1076e2,
+    #8be071,
+    #fffb62,
+    #fc9127,
+    #d71729
+  );
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.post-form > * {
+  width: 90%;
+}
+
+#post-content {
+  margin-bottom: 15px;
+  margin-top: 5px;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+}
+
+.additional-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 55px;
+}
+
+.additional-content input {
+  height: 30px;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid black;
+  font-family: "Concert One", cursive;
+}
+
+.additional-content input:focus {
+  outline: none;
+}
+
+.post .post-btn {
+  width: 100px;
+  height: 30px;
+  background-color: #1076e2;
+  border: none;
+  color: none;
+  font-family: "Concert One", cursive;
+  color: #fff;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.post .post-btn:hover {
+  background-color: #0b63c0;
+}
+
+.word-counter {
+  font-size: 14px;
+  text-align: right;
+  margin-top: -15px;
+}
+label {
+  font-size: 25px;
+}

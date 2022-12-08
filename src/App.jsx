@@ -1,4 +1,5 @@
 import { Navbar } from "./navbar";
+import { Post } from "./post";
 import { Profile } from "./profile";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <Navbar />
       {/* <Profile /> */}
+      <Post />
     </>
   );
 }
