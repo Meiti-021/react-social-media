@@ -2,12 +2,15 @@ import "./post.css";
 import meow from "./assets/meow.png";
 import { useState } from "react";
 import { useEffect } from "react";
+import { myInfo } from "./myInfo";
+import { useGlobalContext } from "./context";
 export const Post = () => {
   const [formData, setFormData] = useState({
     newMassage: "",
     title: "",
     tags: "",
   });
+  const { data, setData } = useGlobalContext();
   const [limitNumber, setLimitNumber] = useState(300);
   useEffect(() => {
     const counter = 300 - formData.newMassage.length;
@@ -19,13 +22,34 @@ export const Post = () => {
       [event.target.dataset.type]: event.target.value,
     });
   };
+  const submition = (event) => {
+    event.preventDefault();
+    const hashtags = formData.tags.split(" ");
+    const newPost = {
+      userInfo: {
+        ...myInfo,
+      },
+      post: {
+        title: formData.title,
+        massage: formData.newMassage,
+        id: "dshvbsvbshvbdlsvhdbsvh",
+        tags: [...hashtags],
+      },
+    };
+    console.log(newPost);
+    setData([...data, newPost]);
+  };
   return (
     <>
       <div className="post">
         <figure>
           <img src={meow} alt="" className="post-image" />
         </figure>
-        <form action="#" className="post-form">
+        <form
+          action="#"
+          className="post-form"
+          onSubmit={() => submition(event)}
+        >
           <label htmlFor="post-content">New Meow:</label>
           <textarea
             name="post-content"
