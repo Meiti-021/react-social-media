@@ -1,3 +1,4 @@
+import { Home } from "./home";
 import { Navbar } from "./navbar";
 import { Post } from "./post";
 import { Profile } from "./profile";
@@ -7,7 +8,8 @@ function App() {
     <>
       <Navbar />
       {/* <Profile /> */}
-      <Post />
+      {/* <Post /> */}
+      <Home />
     </>
   );
 }
