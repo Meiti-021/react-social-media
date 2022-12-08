@@ -18,6 +18,11 @@ nav {
   cursor: pointer;
   width: 33.33%;
   max-width: 350px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .nav-btn__middle {
