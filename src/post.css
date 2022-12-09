@@ -1,5 +1,12 @@
 .post {
   font-family: "Concert One", cursive;
+  height: 100vh;
+  padding-bottom: 150px;
+  overflow-y: scroll;
+}
+
+.post::-webkit-scrollbar {
+  display: none;
 }
 
 .post figure {

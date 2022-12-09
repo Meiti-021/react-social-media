@@ -1,6 +1,11 @@
 .profile {
   width: 100vw;
-  height: 92.5vh;
+  height: 100vh;
+  padding-bottom: 150px;
+  overflow-y: scroll;
+}
+.profile::-webkit-scrollbar {
+  display: none;
 }
 
 .profile figure {
